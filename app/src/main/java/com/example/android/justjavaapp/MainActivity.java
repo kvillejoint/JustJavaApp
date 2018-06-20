@@ -18,6 +18,9 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import java.text.NumberFormat;
+
+import org.w3c.dom.Text;
 
 /**
  * This app displays an order form to order coffee.
@@ -127,14 +130,14 @@ public class MainActivity extends AppCompatActivity {
      * @return text summary
      */
     private String createOrderSummary(String name, int price, boolean addWhippedCream, boolean addChocolate) {
-        String priceMessage = "Name: " + name;
+        String priceMessage = getString(R.string.order_summary_name, name);
         //+= is the same as priceMessage = priceMessage + ...
         //This is a useful Java shorthand
-        priceMessage += "\nAdd whipped cream?: " + addWhippedCream;
-        priceMessage += "\nAdd chocolate?: " + addChocolate;
-        priceMessage = priceMessage + "\nQuantity: " + quantity;
-        priceMessage += "\nTotal: $" + price;
-        priceMessage += "\nThank you!";
+        priceMessage += "\n" + getString(R.string.order_summary_whipped_cream, addWhippedCream);
+        priceMessage += "\n" + getString(R.string.order_summary_chocolate, addChocolate);
+        priceMessage += "\n" + getString(R.string.order_summary_quantity, quantity);
+        priceMessage += "\n" + getString(R.string.order_summary_price, NumberFormat.getCurrencyInstance().format(price));;
+        priceMessage += "\n" + getString(R.string.thank_you);
         return priceMessage;
     }
 

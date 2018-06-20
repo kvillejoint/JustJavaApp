@@ -1,3 +1,31 @@
-<resources>
-    <string name="app_name">JustJavaApp</string>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Just Java</string>
+    <!-- String resources for XML file -->
+    <!-- Header text for list of toppings [CHAR LIMIT=20] -->
+    <string name="toppings">Toppings</string>
+    <!-- Text for list of whipped cream [CHAR LIMIT=20] -->
+    <string name="whipped_cream">Whipped Cream</string>
+    <!-- Text for list of chocolate [CHAR LIMIT=20] -->
+    <string name="chocolate">Chocolate</string>
+    <!-- Header text for quantity section [CHAR LIMIT=20] -->
+    <string name="quantity">Quantity</string>
+    <!-- Text for Order button [CHAR LIMIT=20] -->
+    <string name="order">Order</string>
+    <string name="initial_quantity_value">1</string>
+    <!-- Text for hint on name field [CHAR LIMIT=30] -->
+    <string name="name">Name</string>
+
+    <!-- String resources for Java file - Order Summary -->
+    <!-- Name text for Order Summary [CHAR LIMIT=NONE] -->
+    <string name="order_summary_name">Name: <xliff:g id="name" example="Tony Stark">%s</xliff:g></string>
+    <!-- Text for adding whipped cream for Order Summary [CHAR LIMIT=NONE] -->
+    <string name="order_summary_whipped_cream">Whipped Cream: <xliff:g id="addWhippedCream" example="false">%b</xliff:g></string>
+    <!-- Text for adding chocolate for Order Summary [CHAR LIMIT=NONE] -->
+    <string name="order_summary_chocolate">Chocolate: <xliff:g id="addChocolate" example="true">%b</xliff:g></string>
+    <!-- Quantity text for Order Summary [CHAR LIMIT=NONE] -->
+    <string name="order_summary_quantity">Quantity: <xliff:g id="quantity" example="1">%i</xliff:g></string>
+    <!-- Total text for Order Summary [CHAR LIMIT=NONE] -->
+    <string name="order_summary_price">Total: <xliff:g id="price" example="$18">%i</xliff:g></string>
+    <!-- Thank you message for Order Summary [CHAR LIMIT=NONE] -->
+    <string name="thank_you">Thank You!</string>
 </resources>
